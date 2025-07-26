@@ -2,11 +2,11 @@
 #ifndef TEST_INC_PARAMETRIC_TESTS_H_
 #define TEST_INC_PARAMETRIC_TESTS_H_
 
+#include "./common.h"
 #include <iostream>
 #include <tuple>
-#include "test/inc/common.h"
 
-using ::testing::TestWithParam;  // GTest parametric test fixture
+using ::testing::TestWithParam; // GTest parametric test fixture
 
 /* Inherit GTest parametric test fixture
  *
@@ -16,11 +16,11 @@ using ::testing::TestWithParam;  // GTest parametric test fixture
  * Params: a, b
  *****************************************************************************/
 class SweepTest : public TestWithParam<std::tuple<float, float>> {
- protected:
+protected:
   // Declare some member variables local to each test case
   int counter;
   float a, b;
-  EasyMaths* maths;
+  EasyMaths *maths;
 
   // GTest runs this before any test code
   void SetUp() override {
@@ -36,4 +36,4 @@ class SweepTest : public TestWithParam<std::tuple<float, float>> {
   void TearDown() override { delete maths; }
 };
 
-#endif  // TEST_INC_PARAMETRIC_TESTS_H_
+#endif // TEST_INC_PARAMETRIC_TESTS_H_

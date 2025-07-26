@@ -2,19 +2,19 @@
 #ifndef TEST_INC_FIXTURE_TESTS_H_
 #define TEST_INC_FIXTURE_TESTS_H_
 
+#include "./common.h"
 #include <iostream>
-#include "test/inc/common.h"
 
-using ::testing::Test;  // GTest test fixture
+using ::testing::Test; // GTest test fixture
 
 /* Inherit GTest base test fixture and create our own fixture
  *****************************************************************************/
 class MathsTest : public Test {
- protected:
+protected:
   // Declare some member variables local to each test case
   int counter;
   float a, b;
-  EasyMaths* maths;
+  EasyMaths *maths;
 
   // GTest runs this before any test code
   void SetUp() override {
@@ -32,4 +32,4 @@ class MathsTest : public Test {
   }
 };
 
-#endif  // TEST_INC_FIXTURE_TESTS_H_
+#endif // TEST_INC_FIXTURE_TESTS_H_

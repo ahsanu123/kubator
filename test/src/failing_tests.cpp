@@ -1,6 +1,5 @@
 // Tests meant to fail
-#include <iostream>
-#include "test/inc/common.h"
+#include "../inc/common.h"
 
 /* Demonstrate non-fatal failure
  *

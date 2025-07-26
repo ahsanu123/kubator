@@ -1,5 +1,5 @@
 // Fixtured test cases
-#include "test/inc/fixture_tests.h"
+#include "../inc/fixture_tests.h"
 
 /* TEST_F pulls the fixture of the same name from the header.
  * The fixture in the header defines some local test variables and
@@ -19,8 +19,8 @@ TEST_F(MathsTest, TestAdd) {
   float expected = a + b;
 
   // Notice the 'FLOAT' designation in our check
-  EXPECT_FLOAT_EQ(expected, result) << ERR_PREFIX
-                                    << "Failed to add numbers correctly!";
+  EXPECT_FLOAT_EQ(expected, result)
+      << ERR_PREFIX << "Failed to add numbers correctly!";
 }
 
 /* Test the `mult` method
@@ -34,8 +34,8 @@ TEST_F(MathsTest, TestMult) {
   float expected = a * b;
 
   // Notice the 'FLOAT' designation in our check
-  EXPECT_FLOAT_EQ(expected, result) << ERR_PREFIX
-                                    << "Failed to multiply numbers correctly!";
+  EXPECT_FLOAT_EQ(expected, result)
+      << ERR_PREFIX << "Failed to multiply numbers correctly!";
 }
 
 /* Test the `sub` method
@@ -49,8 +49,8 @@ TEST_F(MathsTest, TestSub) {
   float expected = a - b;
 
   // Notice the 'FLOAT' designation in our check
-  EXPECT_FLOAT_EQ(expected, result) << ERR_PREFIX
-                                    << "Failed to subtract numbers correctly!";
+  EXPECT_FLOAT_EQ(expected, result)
+      << ERR_PREFIX << "Failed to subtract numbers correctly!";
 }
 
 /* Test the `div` method
@@ -64,6 +64,6 @@ TEST_F(MathsTest, TestDiv) {
   float expected = a / b;
 
   // Notice the 'FLOAT' designation in our check
-  EXPECT_FLOAT_EQ(expected, result) << ERR_PREFIX
-                                    << "Failed to divide numbers correctly!";
+  EXPECT_FLOAT_EQ(expected, result)
+      << ERR_PREFIX << "Failed to divide numbers correctly!";
 }

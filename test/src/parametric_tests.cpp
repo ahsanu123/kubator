@@ -1,5 +1,5 @@
 // Parametric test cases
-#include "test/inc/parametric_tests.h"
+#include "../inc/parametric_tests.h"
 
 // GTest param generators so we don't have to write the namespace everywhere
 using ::testing::Combine;
@@ -19,8 +19,8 @@ TEST_P(SweepTest, TestAdd) {
   float expected = a + b;
 
   // Notice the 'FLOAT' designation in our check
-  EXPECT_FLOAT_EQ(expected, result) << ERR_PREFIX
-                                    << "Failed to add numbers correctly!";
+  EXPECT_FLOAT_EQ(expected, result)
+      << ERR_PREFIX << "Failed to add numbers correctly!";
 }
 
 /* Test the `mult` method with various values
@@ -32,8 +32,8 @@ TEST_P(SweepTest, TestMult) {
   float expected = a * b;
 
   // Notice the 'FLOAT' designation in our check
-  EXPECT_FLOAT_EQ(expected, result) << ERR_PREFIX
-                                    << "Failed to multiply numbers correctly!";
+  EXPECT_FLOAT_EQ(expected, result)
+      << ERR_PREFIX << "Failed to multiply numbers correctly!";
 }
 
 /* Define the parameter sets
@@ -48,5 +48,5 @@ INSTANTIATE_TEST_CASE_P(SelectValues, SweepTest,
 
 // Use `Combine` to generate all param combinations. This is 9 sets of params
 INSTANTIATE_TEST_CASE_P(ComboValues, SweepTest,
-                        Combine(Values(-1., 1., 2.5),  // values for `a`
-                                Values(-2., 2, 5.)));  // values for `b`
+                        Combine(Values(-1., 1., 2.5), // values for `a`
+                                Values(-2., 2, 5.))); // values for `b`
