@@ -1,3 +1,5 @@
 _build/
 __*/
 build/
+.cache/
+xpacks/

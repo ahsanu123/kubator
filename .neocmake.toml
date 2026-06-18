@@ -1,0 +1,3 @@
+command_case = "lower_case"       # or "upper_case"
+enable_external_cmake_lint = true # true to use external cmake-lint
+line_max_words = 80
